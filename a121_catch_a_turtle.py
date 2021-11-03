@@ -39,6 +39,7 @@ def update_score():
     score += 1
     score_writer.clear()
     score_writer.write(score, font = font_setup)
+    
 def spot_clicked(x,y):
     global timer_up
     if (not timer_up):
@@ -46,7 +47,8 @@ def spot_clicked(x,y):
         change_position()
     else:
         t.hideturtle()
-        update_score()
+        
+        
 def change_position():
     t.penup()
     t.hideturtle()
@@ -55,6 +57,7 @@ def change_position():
     t.goto(new_xpos,new_ypos)
     t.pendown()
     t.showturtle()
+    
 def countdown():
     global timer, timer_up
     count.clear()
