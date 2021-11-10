@@ -8,26 +8,34 @@ gold_score = 25
 
 # load leaderboard from file
 def load_leaderboard(file_name, leader_names, leader_scores):
-
+  
   leaderboard_file = open(file_name, "r")  # need to create the file ahead of time in same folder
 
   # use a for loop to iterate through the content of the file, one line at a time
   # note that each line in the file has the format "leader_name,leader_score" for example "Pat,50"
   for line in leaderboard_file:
     leader_name = ""
-    leader_score = ""    
+    leader_score = ""
     index = 0
 
     # TODO 1: use a while loop to read the leader name from the line (format is "leader_name,leader_score")
-
+    while (line[index] != ","):
+      leader_name = leader_name + line[index] 
+      index = index + 1
+    print("the leader is:",leader_name)
 
     # TODO 2: add the leader name to the list
-
+    leader_names.append(leader_name)
     
     # TODO 3: read the player score using a similar loop
-
+    index = index + 1
+    while (line[index] != "\n"):
+      leader_score = leader_score + line[index]
+      index = index + 1
     
+    print("leader score is:", leader_score)
     # TODO 4: add the player score to the list
+    leader_score.append(int(leader_score))
 
   leaderboard_file.close()
 
