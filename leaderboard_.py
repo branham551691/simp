@@ -35,7 +35,7 @@ def load_leaderboard(file_name, leader_names, leader_scores):
     
     print("leader score is:", leader_score)
     # TODO 4: add the player score to the list
-    leader_score.append(int(leader_score))
+    leader_scores.append(int(leader_score))
 
   leaderboard_file.close()
 
