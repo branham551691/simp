@@ -19,14 +19,14 @@ sizes = [1, 1.5, 2, 2.5]
 #-----counter-----
 counter_interval = 1000
 timer_up = False
-timer = 10
+timer = 5
 count = t.Turtle()
 count.hideturtle()
 count.penup()
 count.goto(150,150)
 count.pendown()
 #-----leaderboard-----
-leaderboard_file_name = "leader_board_file.txt"
+leaderboard_file_name = "leaderboard_file1.txt"
 leader_names_list = []
 leader_scores_list = []
 player_name = input("please enter your name:  ")
@@ -41,9 +41,9 @@ def manage_leaderboard():
   #-----TODO-----
   if (len(leader_scores_list) < 5 or score > leader_scores_list[4]):
     lb.update_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list, player_name, score)
-    lb.draw_leaderboard(leader_names_list, leader_scores_list, True, spot_clicked, score)
+    lb.draw_leaderboard(leader_names_list, leader_scores_list, True, spot, score)
   else:
-    lb.draw_leaderboard(leader_names_list, leader_scores_list, False, spot_clicked, score)
+    lb.draw_leaderboard(leader_names_list, leader_scores_list, False, spot, score)
 #-----initialize turtle-----
 t.begin_fill()
 t.shape(shape)
