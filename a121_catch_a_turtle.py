@@ -2,9 +2,7 @@
 #-----import statements-----
 import turtle as t
 import random as rand
-'''''
 import leaderboard as lb
-'''''
 #-----game configuration----
 shape = "circle"
 size = "2"
@@ -21,14 +19,14 @@ sizes = [1, 1.5, 2, 2.5]
 #-----counter-----
 counter_interval = 1000
 timer_up = False
-timer = 5
+timer = 10
 count = t.Turtle()
 count.hideturtle()
 count.penup()
 count.goto(150,150)
 count.pendown()
 #-----leaderboard-----
-leaderboard_file_name = "a122_leaderboard.txt"
+leaderboard_file_name = "leader_board_file.txt"
 leader_names_list = []
 leader_scores_list = []
 player_name = input("please enter your name:  ")
@@ -38,7 +36,6 @@ def manage_leaderboard():
   global leader_names_list
   global score
   global spot
-  '''''
   #-----load all the leaderboard records into the lists-----
   lb.load_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list)
   #-----TODO-----
@@ -47,7 +44,6 @@ def manage_leaderboard():
     lb.draw_leaderboard(leader_names_list, leader_scores_list, True, spot_clicked, score)
   else:
     lb.draw_leaderboard(leader_names_list, leader_scores_list, False, spot_clicked, score)
-    '''''
 #-----initialize turtle-----
 t.begin_fill()
 t.shape(shape)
