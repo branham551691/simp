@@ -2,7 +2,7 @@
 #-----import statements-----
 import turtle as t
 import random as rand
-import leaderboard as lb
+import leaderboard_ as lb
 #-----game configuration----
 shape = "circle"
 size = "2"
